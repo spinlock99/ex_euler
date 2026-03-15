@@ -11,7 +11,7 @@ defmodule Problem11Test do
   end
 
   describe "solution" do
-    test "is reads the data" do
+    test "reads the data" do
       assert Problem11.solution() == 70_600_674
     end
   end
@@ -25,29 +25,29 @@ defmodule Problem11Test do
   end
 
   describe "largest" do
-    test "it returns the max" do
+    test "returns the max" do
       max = private Problem11.largest({:"$end_of_table", 10})
       assert max == 10
     end
 
-    test "it works with keys" do
+    test "works with keys" do
       max = private Problem11.largest({:ets.first(:memo),0})
       assert max == 70_600_674
     end
   end
 
   describe "right" do
-    test "it multiplies 4 numbers to the right" do
+    test "multiplies 4 numbers to the right" do
       right = private Problem11.right({0,0})
       assert right == 34_144
     end
 
-    test "it multiplies 4 numbers to the right starting at 16" do
+    test "multiplies 4 numbers to the right starting at 16" do
       right = private Problem11.right({16,0})
       assert right == 2_802_800
     end
 
-    test "it returns zero if there aren't 4 numbers to the right" do
+    test "returns zero if there aren't 4 numbers to the right" do
       right = private Problem11.right({17,0})
       assert right == 0
     end
@@ -76,7 +76,7 @@ defmodule Problem11Test do
       assert down == 0
     end
 
-    test "it multiplies 4 numbers down" do
+    test "multiplies 4 numbers down" do
       down = private Problem11.down({0,0})
       assert down == 1_651_104
     end
